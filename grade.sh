@@ -1,7 +1,6 @@
 CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
 
 ## clone the student submission to /student-submission
-rm -rf student-submission
 git clone $1 student-submission
 echo 'Finished cloning'
 
@@ -15,7 +14,6 @@ else
 fi
 
 ## Copy the necessary files into one folder
-rm -rf test-field
 mkdir test-field
 mkdir test-field/lib
 cp lib/hamcrest-core-1.3.jar test-field/lib
@@ -50,3 +48,7 @@ else
     echo "Failures: " $num_fail
     echo "Score: " $((($num_test - $num_fail) / $num_test * 100)) "%"
 fi
+
+## Clears out the folders
+rm -rf student-submission
+rm -rf test-field
