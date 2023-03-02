@@ -50,4 +50,3 @@ else
     echo "Failures: " $num_fail
     echo "Score: " $((($num_test - $num_fail) / $num_test * 100)) "%"
 fi
-
