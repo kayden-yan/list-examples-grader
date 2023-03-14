@@ -1,4 +1,4 @@
-CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
+CPATH='.;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar'
 
 ## Clears out the folders
 rm -rf student-submission
@@ -26,13 +26,11 @@ cp $FILE test-field
 cp TestListExamples.java test-field
 
 ## Complie
-set +e
 cd test-field
-javac -cp $CPATH *.java > compile_result.txt
-found=$(wc -l compile_result.txt)
+javac -cp $CPATH *.java &> compile_result.txt
+found=$(wc -w  compile_result.txt | cut -c1)
 if [[ $found > 0 ]]; then
     echo "Compile Error!"
-    echo compile_result.txt
     exit
 else
     echo "Compile Success!"
