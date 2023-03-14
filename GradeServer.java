@@ -23,7 +23,7 @@ class ExecHelpers {
       if(c == -1) { break; }
       result += (char)c;
     }
-    return result;
+    return new String(out.readAllBytes());
   }
 
   /**

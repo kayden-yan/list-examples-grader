@@ -1,5 +1,9 @@
 CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
 
+## Clears out the folders
+rm -rf student-submission
+rm -rf test-field
+
 ## clone the student submission to /student-submission
 git clone $1 student-submission
 echo 'Finished cloning'
