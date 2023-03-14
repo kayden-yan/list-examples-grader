@@ -52,5 +52,6 @@ else
 fi
 
 ## Clears out the folders
+cd ..
 rm -rf student-submission
 rm -rf test-field
