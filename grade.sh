@@ -48,10 +48,10 @@ else
     num_fail=$(echo $failure_str | tr -dc '0-9')
     echo "Test_run: " $num_test
     echo "Failures: " $num_fail
-    echo "Score: " $((($num_test - $num_fail) / $num_test * 100)) "%"
+    echo "Score: "$num_fail/$num_test""
 fi
 
 ## Clears out the folders
 cd ..
-rm -rf student-submission
-rm -rf test-field
+##rm -rf student-submission
+##rm -rf test-field
